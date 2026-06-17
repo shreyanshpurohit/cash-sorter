@@ -6,7 +6,7 @@ It takes an amount in cents and calculates the minimum number of:
 - Quarters (25¢)
 - Dimes (10¢)
 - Nickels (5¢)
-- Pennies (1¢)
+- Cents (1¢)
 
 ---
 
@@ -79,6 +79,6 @@ Output:
 Quarters: 1
 Dimes: 1
 Nickels: 1
-Pennies: 1
+Cents: 1
 Total coins: 4
 ```
