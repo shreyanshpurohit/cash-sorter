@@ -13,7 +13,7 @@ It takes an amount in cents and calculates the minimum number of:
 ## Project Structure
 
 ```text
-cash_sorter/
+cash-sorter/
 ├── cash_sorter.c
 ├── Makefile
 ├── README.md
