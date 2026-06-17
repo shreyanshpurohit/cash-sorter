@@ -1,20 +1,55 @@
 # Cash Sorter
 
-A simple C program that solves the **coin change problem** by finding the minimum number of coins needed for a given amount of change.
+Cash Sorter is a simple C program that solves the **coin change problem** using a greedy algorithm.
 
-It uses a greedy algorithm to break the amount into:
+It takes an amount in cents and calculates the minimum number of:
 - Quarters (25¢)
 - Dimes (10¢)
 - Nickels (5¢)
 - Pennies (1¢)
 
-## Compile
+---
 
-```bash
-gcc cash.c -o cash_sorter
+## Project Structure
+
+```text
+cash_sorter/
+├── cash_sorter.c
+├── Makefile
+├── README.md
 ```
 
-## Run
+---
+
+## Requirements
+
+Make sure you have a C compiler installed, such as GCC.
+
+You can check if it is installed by running:
+
+```bash
+gcc --version
+```
+
+---
+
+## How to Compile
+
+1. Open a terminal in the project folder.
+
+2. Run:
+
+```bash
+make cash_sorter
+```
+
+This will compile `cash_sorter.c` and create an executable file called `cash_sorter`.
+
+---
+
+## How to Run
+
+After compiling, run:
 
 Linux/macOS:
 
@@ -28,12 +63,14 @@ Windows:
 cash_sorter.exe
 ```
 
+---
+
 ## Example
 
 Input:
 
 ```text
-41
+Change owed: 41
 ```
 
 Output:
