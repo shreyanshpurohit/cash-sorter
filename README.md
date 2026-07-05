@@ -67,7 +67,7 @@ cash_sorter.exe
 
 ## Run without compiling
 
-You can check the releases to find bin file for your operation system.
+You can check the releases to find bin file for your operation system but i would recommend to compile it yourself for better compatibility.
 
 ## Example
 
