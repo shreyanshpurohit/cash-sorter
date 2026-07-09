@@ -1,6 +1,6 @@
 # Cash Sorter
 
-Cash Sorter is a simple C program that solves the **coin change problem** using a greedy algorithm.
+Cash Sorter is a simple desktop application written in C using GTK4. It solves the **coin change problem** using a greedy algorithm.
 
 It takes an amount in cents and calculates the minimum number of:
 - Quarters (25¢)
@@ -23,13 +23,8 @@ cash-sorter/
 
 ## Requirements
 
-Make sure you have a C compiler installed, such as GCC.
-
-You can check if it is installed by running:
-
-```bash
-gcc --version
-```
+- GCC or another C compiler
+- GTK4 development libraries
 
 ---
 
