@@ -6,7 +6,7 @@ GtkWidget *entry;
 GtkWidget *quarter_label;
 GtkWidget *dime_label;
 GtkWidget *nickel_label;
-GtkWidget *penny_label;
+GtkWidget *cent_label;
 GtkWidget *total_label;
 
 int calculate_quarter(int cents)
@@ -55,7 +55,7 @@ static void calculate(GtkButton *button, gpointer data)
         gtk_label_set_text(GTK_LABEL(quarter_label), "");
         gtk_label_set_text(GTK_LABEL(dime_label), "");
         gtk_label_set_text(GTK_LABEL(nickel_label), "");
-        gtk_label_set_text(GTK_LABEL(penny_label), "");
+        gtk_label_set_text(GTK_LABEL(cent_label), "");
         return;
     }
 
@@ -68,8 +68,7 @@ static void calculate(GtkButton *button, gpointer data)
     int nickels = calculate_nickel(cents);
     cents -= nickels * 5;
 
-    int pennies = cents;
-    int total = quarters + dimes + nickels + pennies;
+    int total = quarters + dimes + nickels + cents;
 
     char buffer[100];
 
@@ -82,8 +81,8 @@ static void calculate(GtkButton *button, gpointer data)
     sprintf(buffer, "Nickels: %d", nickels);
     gtk_label_set_text(GTK_LABEL(nickel_label), buffer);
 
-    sprintf(buffer, "Pennies: %d", pennies);
-    gtk_label_set_text(GTK_LABEL(penny_label), buffer);
+    sprintf(buffer, "Cents: %d", cents);
+    gtk_label_set_text(GTK_LABEL(cent_label), buffer);
 
     sprintf(buffer, "Total Coins: %d", total);
     gtk_label_set_text(GTK_LABEL(total_label), buffer);
@@ -120,13 +119,13 @@ static void activate(GtkApplication *app, gpointer user_data)
     quarter_label = gtk_label_new("");
     dime_label = gtk_label_new("");
     nickel_label = gtk_label_new("");
-    penny_label = gtk_label_new("");
+    cent_label = gtk_label_new("");
     total_label = gtk_label_new("");
 
     gtk_box_append(GTK_BOX(box), quarter_label);
     gtk_box_append(GTK_BOX(box), dime_label);
     gtk_box_append(GTK_BOX(box), nickel_label);
-    gtk_box_append(GTK_BOX(box), penny_label);
+    gtk_box_append(GTK_BOX(box), cent_label);
     gtk_box_append(GTK_BOX(box), total_label);
 
     gtk_window_present(GTK_WINDOW(window));
