@@ -46,23 +46,15 @@ This will compile `cash_sorter.c` and create an executable file called `cash_sor
 
 After compiling, run:
 
-Linux/macOS:
-
 ```bash
 ./cash_sorter
-```
-
-Windows:
-
-```bash
-cash_sorter.exe
 ```
 
 ---
 
 ## Run without compiling
 
-You can check the releases to find bin file for your operation system but i would recommend to compile it yourself for better compatibility.
+You can check the releases to find bin file but I would recommend to compile it yourself for better compatibility.
 
 ## Example
 
